@@ -90,7 +90,7 @@ class ConfigActivity : AppCompatActivity() {
     }
 
     private fun loadEvents() {
-        events = CalendarHelper.getEvents(this, 365)
+        events = CalendarHelper.getEvents(this, 1095)
         recyclerView.adapter = EventAdapter(events, selectedIds) { updateSaveBtn() }
         updateSaveBtn()
     }
