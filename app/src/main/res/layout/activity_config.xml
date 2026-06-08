@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@color/bg_dark"
     android:fitsSystemWindows="true">
-
+ 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,8 +17,29 @@
         android:textStyle="bold"
         android:gravity="center"
         android:paddingTop="24dp"
-        android:paddingBottom="16dp" />
-
+        android:paddingBottom="12dp" />
+ 
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:hint="Search events..."
+        android:textColor="@color/text_primary"
+        android:textColorHint="#55FFFFFF"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:background="@drawable/search_bg"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/text_muted" />
+ 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/event_list"
         android:layout_width="match_parent"
@@ -26,7 +47,7 @@
         android:layout_weight="1"
         android:padding="12dp"
         android:clipToPadding="false" />
-
+ 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/save_btn"
         android:layout_width="match_parent"
@@ -34,8 +55,7 @@
         android:layout_margin="16dp"
         android:text="@string/save"
         android:enabled="false" />
-
-    <!-- Permission prompt (hidden when granted) -->
+ 
     <LinearLayout
         android:id="@+id/perm_prompt"
         android:layout_width="match_parent"
@@ -44,7 +64,7 @@
         android:gravity="center"
         android:padding="32dp"
         android:visibility="gone">
-
+ 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +73,7 @@
             android:textSize="14sp"
             android:gravity="center"
             android:layout_marginBottom="16dp" />
-
+ 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/perm_btn"
             android:layout_width="wrap_content"
@@ -61,3 +81,4 @@
             android:text="@string/grant_permission" />
     </LinearLayout>
 </LinearLayout>
+ 
